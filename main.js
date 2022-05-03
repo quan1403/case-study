@@ -15,32 +15,22 @@ const RIGHT = 39
 const DOWN = 40
 const GAME_DELAY = 100
 
+
 function barrie() {
     ctx.beginPath()
     ctx.fillStyle = "red";
-    ctx.fillRect(320,0,150,20);
+    ctx.fillRect(320, 0, 150, 20);
     ctx.closePath()
-}
-function barrie1() {
-    ctx.beginPath()
-    ctx.fillStyle = "red";
-    ctx.fillRect(780,300,20,150);
-    ctx.closePath()
-}
-function barrie2() {
-    ctx.beginPath()
-    ctx.fillStyle = "red";
-    ctx.fillRect(340,780,150,20);
-    ctx.closePath()
-}
-function barrie3() {
-    ctx.beginPath()
-    ctx.fillStyle = "red";
-    ctx.fillRect(0,300,20,150);
-    ctx.closePath()
-}
 
+    ctx.fillRect(780, 300, 20, 150);
+    ctx.closePath()
 
+    ctx.fillRect(340, 780, 150, 20);
+    ctx.closePath()
+
+    ctx.fillRect(0, 300, 20, 150);
+    ctx.closePath()
+}
 
 
 
@@ -110,7 +100,10 @@ class Snake{
 
         this.draw()
 
+
     }
+
+
     checkEat(food){
         let head = this.body[0]
         return food.x === head.x && food.y === head.y
@@ -128,6 +121,9 @@ class Snake{
         this.body.push(newPart)
         this.draw()
     }
+
+
+
 }
 class Food{
     constructor(x,y) {
@@ -202,6 +198,3 @@ document.onkeydown = function (e) {
     }
 }
 barrie();
-barrie1();
-barrie2();
-barrie3()
